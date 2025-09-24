@@ -1,3 +1,4 @@
+using System.Runtime.CompilerServices;
 using Acidmanic.Mathematics.Exceptions;
 
 namespace Acidmanic.Mathematics.Extensions;
@@ -7,10 +8,6 @@ namespace Acidmanic.Mathematics.Extensions;
 /// </summary>
 internal static class MatrixConditionProbingExtensions
 {
-
-
-
-
 
     public static void CheckIf2D(this Matrix m,string operationName)
     {
