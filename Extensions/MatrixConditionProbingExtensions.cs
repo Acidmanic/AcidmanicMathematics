@@ -23,8 +23,4 @@ internal static class MatrixConditionProbingExtensions
             throw new InvalidMatrixDimensionsException($"Matrices need to have same number of elements for {operationName}");
         }
     }
-
-    public static void stupidMethod()
-    {
-    }
 }
