@@ -1,4 +1,3 @@
-using MathNet.Numerics.Distributions;
 
 namespace Acidmanic.Mathematics.Utilities;
 

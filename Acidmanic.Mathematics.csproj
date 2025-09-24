@@ -6,10 +6,6 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="MathNet.Numerics" Version="5.0.0" />
-  </ItemGroup>
-
   <PropertyGroup>
     <!-- NuGet -->
     <Id>Acidmanic.Mathematics</Id>

@@ -1,8 +1,6 @@
 using Acidmanic.Mathematics.Exceptions;
 using Acidmanic.Mathematics.Extensions;
 using Acidmanic.Mathematics.Models;
-using MathNet.Numerics.Financial;
-using MathNet.Numerics.LinearAlgebra;
 
 namespace Acidmanic.Mathematics;
 
@@ -73,12 +71,12 @@ public static class MathX
     /// <returns>The dot product of matrices v1 and v2, where both matrices are treated as vectors.</returns>
     public static double DotProductAsVectors(Matrix v1, Matrix v2)
     {
-        v1.CheckIfSameNumberOfElements(v2,"Vector Dot Product Calculation");
+        v1.CheckIfSameNumberOfElements(v2, "Vector Dot Product Calculation");
 
         var dotProduct = 0.0;
-        
+
         var size = v1.Length;
-        
+
         for (int i = 0; i < size; i++)
         {
             dotProduct += v1.Elements[i] * v2.Elements[i];
@@ -139,38 +137,6 @@ public static class MathX
         var h = Matrix.Identity(x.Length) - (2 * projection);
 
         return h;
-    }
-
-    public static PcaResult Pca(Matrix data,
-        DataMatrix2dForms form = DataMatrix2dForms.RowsAreSamplesColumnsAreFeatures)
-    {
-        data.CheckIf2D("Performing Pca");
-
-        var pcaResult = new PcaResult();
-
-        pcaResult.SampleCovariance = data.Covariance(form);
-
-        var mnCov = pcaResult.SampleCovariance.ToMathNetMatrix();
-
-        var evd = mnCov.Evd();
-
-        pcaResult.EigenValues = evd.EigenValues.Real().ToAcidmanicMathematicsMatrix();
-
-        var eigenVectors = new Matrix[evd.EigenVectors.RowCount];
-
-        for (int r = 0; r < eigenVectors.Length; r++)
-        {
-            eigenVectors[r] = new Matrix(evd.EigenVectors.ColumnCount);
-
-            for (int c = 0; c < eigenVectors[r].Length; c++)
-            {
-                eigenVectors[r][c] = evd.EigenVectors[r, c];
-            }
-        }
-
-        pcaResult.EigenVectors = eigenVectors;
-
-        return pcaResult;
     }
 
 
