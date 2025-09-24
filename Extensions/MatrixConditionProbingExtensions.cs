@@ -1,4 +1,3 @@
-using System.Runtime.CompilerServices;
 using Acidmanic.Mathematics.Exceptions;
 
 namespace Acidmanic.Mathematics.Extensions;
@@ -23,5 +22,9 @@ internal static class MatrixConditionProbingExtensions
         {
             throw new InvalidMatrixDimensionsException($"Matrices need to have same number of elements for {operationName}");
         }
+    }
+
+    public static void stupidMethod()
+    {
     }
 }
