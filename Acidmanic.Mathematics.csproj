@@ -10,4 +10,42 @@
     <PackageReference Include="MathNet.Numerics" Version="5.0.0" />
   </ItemGroup>
 
+  <PropertyGroup>
+    <!-- NuGet -->
+    <Id>Acidmanic.Mathematics</Id>
+    <PackageId>Acidmanic.Mathematics</PackageId>
+    <Version>1.0.0-b01</Version>
+    <Authors>Mani Moayedi</Authors>
+    <Company>Acidmanic</Company>
+    <PackageIcon>Graphics/icon.png</PackageIcon>
+    <Description>Matrix calculation models</Description>
+    <Summary>This package provides matrix object and linear algebra calculations</Summary>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <RepositoryUrl>https://github.com/Acidmanic/AcidmanicMathematics</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageProjectUrl>https://github.com/Acidmanic/AcidmanicMathematics</PackageProjectUrl>
+    <Title>Linear Algebra, Matrices Calculations</Title>
+    <PackageReadmeFile>Readme.md</PackageReadmeFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="Graphics/icon.png">
+      <Pack>true</Pack>
+      <PackagePath>Graphics/icon.png</PackagePath>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="LICENSE.txt">
+      <Pack>true</Pack>
+      <PackagePath>LICENSE.txt</PackagePath>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Include="Readme.md">
+      <Pack>true</Pack>
+      <Link>Readme.md</Link>
+      <PackagePath>/</PackagePath>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  
+  
 </Project>
